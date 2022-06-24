@@ -1,0 +1,22 @@
+{
+  "name": "waraniene",
+  "version": "1.0.0",
+  "description": "\"site mettant en valeur le village de waraniéné \"",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malickruru/waraniene.git"
+  },
+  "author": "ruru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/malickruru/waraniene/issues"
+  },
+  "homepage": "https://github.com/malickruru/waraniene#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
