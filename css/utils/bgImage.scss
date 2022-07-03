@@ -1,0 +1,9 @@
+@mixin Bgimage($image) {
+  background-image: url($image);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+@mixin Bgimage-size($size) {
+  background-size: $size;
+}

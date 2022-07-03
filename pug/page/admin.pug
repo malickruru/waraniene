@@ -1,0 +1,34 @@
+include ../header.pug
+doctype html
+html(lang="fr")
+    include ../head.pug
+    body
+        
+        .container
+            .row
+                h1 Ajouter un utilisateur
+                label image
+                input#article_image(type="text")
+                label nom
+                input#article_nom(type="text")
+                label auteur
+                input#article_auteur(type="text")
+                label contact
+                input#article_contact(type="text")
+                label nbrJaime
+                input#article_nbrJaime(type="number")
+                button(onclick='createArticle()' )= 'ajouter un article'
+                h1 Ajouter un commentaire 
+                label id_article
+                input#commentaire_id_article(type="text")
+                label id_user
+                input#commentaire_id_user(type="text")
+                label texte
+                input#commentaire_texte(type="text")
+                label date
+                input#commentaire_date(type="date" value="2022-06-27")
+                button(onclick='createCommentaires()' )= 'ajouter un commentaire'
+
+    script(src="script/utils.js" )
+    include ../firebase.pug
+    script(src="script/crud.js" ) 

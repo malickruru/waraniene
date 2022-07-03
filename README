@@ -4,3 +4,4 @@
     le fichier _variable.scss contient les variable à modifier
     sass main.scss main.css , la commande pour écraser le css
 
+//a(class=onglet.nom=active ? "link active" : "link", href=onglet.href)= onglet.nom

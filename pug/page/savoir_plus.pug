@@ -1,0 +1,29 @@
+include ../header.pug
+doctype html
+html(lang="fr")
+    include ../head.pug
+    body#body
+        +header ("En savoir +")
+    
+        .stack-wrapper
+            .content
+                .content-btn
+                    button(id='prev' class='click')
+                        i(class="bi bi-arrow-left-circle")
+                        
+                    button(id='next' class='click') 
+                        i(class="bi bi-arrow-right-circle")
+                .containt-titre  
+                    h1#h1.contenttxt Découvrir Waraniéné
+                .content-paragraphe
+                    p#p.contenttxt Cliquez sur les flèches pour naviguer
+            .stack.desktop-only
+                .stack-empty(style= `background-image:url('image/swaziland-2035749.jpg')` id='stack1')
+                .stack__item
+                    iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31487.02879984242!2d-5.6804399468142375!3d9.432046084461842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfb5cb8d6eb7a135%3A0xb4e80c8c46f78669!2zV2FyYW5pw6luw6k!5e0!3m2!1sfr!2sci!4v1656587443480!5m2!1sfr!2sci' width='650' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade')
+                - const bgImage = ["http://www.kababachir.com/wp-content/uploads/2018/04/roi-ancien-empire-benin-oba-king.jpg","https://www.ouras.net/wp-content/uploads/danseboloye.jpg","https://dev.rezoivoire.net/wp-content/uploads/2016/06/waraniene.jpg","https://pbs.twimg.com/media/EmsbuwXW8AAejSk.jpg","https://media.istockphoto.com/photos/hamer-village-near-turmi-ethiopia-picture-id534890271?k=20&m=534890271&s=612x612&w=0&h=VsXzIGlMuTXIyFRdNRL1hGgAPD3rBDVjfZY3f4rcrgw="]
+                each img in bgImage
+                    .stack__item(style= `background-image:url('${img}');`)
+                .stack-empty
+    include ../footer.pug
+    script(src="script/savoir_plus.js") 

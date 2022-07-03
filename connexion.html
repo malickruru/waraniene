@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Découvrir Waraniéné</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">Waraniéné</div>
+      <div class="links desktop-only"><a class="link" href="index.html">Accueil</a><a class="link" href="savoir_plus.html">En savoir +</a><a class="link" href="nos_produits.html">Nos produits</a><a class="link" href="Partenaire.html">Partenaires</a>
+      </div>
+      <div class="d-flex header-option align-item-center">
+        <div id="toggle_userOption"><i class="bi bi-person click"></i></div><i class="bi bi-list click mobile-only " id="menu" onclick="OpenMenu()"></i>
+      </div>
+    </header>
+    <div id="userOption"></div>
+    <div class="d-none" id="mobile-menu"><a class="link" href="index.html">Accueil</a><a class="link" href="savoir_plus.html">En savoir +</a><a class="link" href="nos_produits.html">Nos produits</a><a class="link" href="Partenaire.html">Partenaires</a>
+    </div>
+    <div class="container-fluid min-height">
+      <div class="row">
+        <div class="col-sm-6" id="connection-right"> </div>
+        <div class="col-sm-6 center-column min-height" id="connection-left">
+          <h1>Connectez-vous</h1><span>  </span>
+          <button class="my-3 SocialBtn google" onclick="googleSignIn()">Connexion avec Google<i class="bi bi-google "> </i></button>
+          <button class="my-3 SocialBtn facebook" onclick="facebookSignIn()">Connexion avec Facebook<i class="bi bi-facebook "> </i></button>
+          <button class="my-3 SocialBtn twitter" onclick="twitterSignIn()">Connexion avec Twitter<i class="bi bi-twitter "> </i></button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script/utils.js"> </script>
+  <!-- gsap-->
+  <script src="node_modules/gsap/dist/gsap.min.js"></script>
+  <!-- firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"> </script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"> </script>
+  <script src="script/Autentication.js"> </script>
+  <script src="script/Connexion.js"> </script>
+</html>

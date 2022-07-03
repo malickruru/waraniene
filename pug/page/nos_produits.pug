@@ -1,0 +1,26 @@
+include ../header.pug
+include ../loader.pug
+doctype html
+html(lang="fr")
+    include ../head.pug
+    body
+        +header ("Nos produits")
+        p.py-5.my-5.text-center
+            em Découvrez ou achetez des produits issus de l'artisanat de Waraniéné
+        .container.min-height#carte_container.py-5.my-5
+            div
+                +loader()
+    .popup-wrapper 
+        .card
+            .card-body.py-3.px-3
+                div.text-center
+                    h5.card-title Ajouter un commentaire
+                div.d-flex.justify-content-center     
+                    textarea#popupInput(name="texte", cols="30", rows="10")
+                div.d-flex.justify-content-around.py-3 
+                    button.close#popupClose.btn-danger(type='button' data-dismiss='modal' aria-label='Close') Fermer
+                    button.btn.btn-success(type='button' id="popupAdd") Valider
+            
+            
+    include ../footer.pug
+    script(src="script/Article.js") 

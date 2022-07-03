@@ -1,0 +1,22 @@
+include ../header.pug
+doctype html
+html(lang="fr")
+    include ../head.pug
+    body
+        +header ("Connexion")
+        .container-fluid.min-height
+            .row
+                .col-sm-6#connection-right 
+                .col-sm-6.center-column.min-height#connection-left
+                    h1 Connectez-vous
+                    span   
+                    button(class="my-3 SocialBtn google", onclick= "googleSignIn()" )= "Connexion avec Google" 
+                        i(class='bi bi-google ' ) 
+                    button(class="my-3 SocialBtn facebook", onclick= "facebookSignIn()")= "Connexion avec Facebook" 
+                        i(class='bi bi-facebook ')  
+                    button(class="my-3 SocialBtn twitter", onclick= "twitterSignIn()")= "Connexion avec Twitter" 
+                        i(class='bi bi-twitter ')  
+    include ../footer.pug
+    
+    
+    

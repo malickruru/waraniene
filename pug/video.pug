@@ -1,0 +1,11 @@
+mixin video()
+    .play-backdrop
+    .play-button
+    svg.play-circles(viewbox='0 0 152 152')
+        circle.play-circle-01(fill='none' stroke='#fff' stroke-width='3' stroke-dasharray='343 343' cx='76' cy='76' r='72.7')
+        circle.play-circle-02(fill='none' stroke='#fff' stroke-width='3' stroke-dasharray='309 309' cx='76' cy='76' r='65.5')
+    .play-perspective
+        button.play-close
+        .play-triangle
+        .play-video
+            iframe(width='600' height='400' src='video/travail.mp4' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen='')

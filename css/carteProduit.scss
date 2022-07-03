@@ -1,0 +1,161 @@
+@import "utils/flexbox.scss";
+
+#carte_container {
+  @include flex(center, center, column);
+}
+.carte {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "carte-img carte-text"
+    "carte-img carte-text";
+  width: 90%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.carte-img {
+  grid-area: carte-img;
+  border: 1px gray solid;
+  @include flex(center, center, 0);
+}
+.carte-img > img {
+  width: 100%;
+}
+
+.carte-text {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.4fr 1.9fr 0.7fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "carte-titre"
+    "carte-commentaire"
+    "carte-options";
+  grid-area: carte-text;
+}
+
+.carte-titre {
+  grid-area: carte-titre;
+  border: 1px gray solid;
+}
+
+.carte-commentaire {
+  grid-area: carte-commentaire;
+  border: 1px gray solid;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.carte-options {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "carte-btn"
+    "carte-stat"
+    "carte-input";
+  grid-area: carte-options;
+  border: 1px gray solid;
+}
+
+.carte-btn {
+  grid-area: carte-btn;
+}
+
+.carte-btn > i {
+  font-size: 1.5em;
+  margin: 5px;
+}
+
+.carte-stat {
+  grid-area: carte-stat;
+}
+
+.carte-input {
+  grid-area: carte-input;
+}
+
+.comment {
+  display: grid;
+  grid-template-columns: 0.4fr 1.6fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "comment-user-info comment-right";
+  height: 100px;
+  border-bottom: 1px solid rgb(194, 194, 194);
+}
+
+.comment-user-info {
+  grid-area: comment-user-info;
+  //border-left: 1px solid gray;
+  @include flex(center, center, column);
+  text-align: center;
+  border-right: 1px solid rgb(194, 194, 194);
+}
+
+.comment-user-info > img {
+  border-radius: 50%;
+  width: 30px;
+}
+
+.comment-right {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.5fr 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "comment-txt"
+    "comment-date";
+  grid-area: comment-right;
+  padding: 0 20px;
+}
+
+.comment-date {
+  grid-area: comment-date;
+  @include flex(flex-start, flex-start, 0);
+}
+
+.comment-txt {
+  grid-area: comment-txt;
+  @include flex(flex-start, flex-end, 0);
+}
+
+.popup-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.164);
+  @include flex(center, center, 0);
+  z-index: 4;
+  display: none;
+}
+
+.modal {
+  z-index: 5;
+}
+
+@media screen and (max-width: 768px) {
+  .carte {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "carte-img"
+      "carte-text";
+    width: 90%;
+    height: auto;
+  }
+}

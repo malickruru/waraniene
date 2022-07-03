@@ -1,0 +1,28 @@
+include ../header.pug
+doctype html
+html(lang="fr")
+    include ../head.pug
+    body
+        +header ("Accueil")
+        .container-fluid.min-height
+            .row.min-height 
+                .col-sm.home-right
+                   
+                    .home-left
+                        h1
+                            b DECOUVRIR 
+                            em Waraniéné
+                        div 
+                            a(href= "savoir_plus.html" class="a")
+                                span.text= 'Découvrir le village'
+                                span.line.-right 
+                                span.line.-top  
+                                span.line.-left
+                                span.line.-bottom  
+                            a(href= "nos_produits.html" class="a")
+                                span.text= 'Découvrir les produits du village'
+                                span.line.-right 
+                                span.line.-top  
+                                span.line.-left
+                                span.line.-bottom 
+    include ../footer.pug

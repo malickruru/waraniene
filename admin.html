@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Découvrir Waraniéné</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <h1>Ajouter un utilisateur</h1>
+        <label>image</label>
+        <input id="article_image" type="text">
+        <label>nom</label>
+        <input id="article_nom" type="text">
+        <label>auteur</label>
+        <input id="article_auteur" type="text">
+        <label>contact</label>
+        <input id="article_contact" type="text">
+        <label>nbrJaime</label>
+        <input id="article_nbrJaime" type="number">
+        <button onclick="createArticle()">ajouter un article</button>
+        <h1>Ajouter un commentaire </h1>
+        <label>id_article</label>
+        <input id="commentaire_id_article" type="text">
+        <label>id_user</label>
+        <input id="commentaire_id_user" type="text">
+        <label>texte</label>
+        <input id="commentaire_texte" type="text">
+        <label>date</label>
+        <input id="commentaire_date" type="date" value="2022-06-27">
+        <button onclick="createCommentaires()">ajouter un commentaire</button>
+      </div>
+    </div>
+  </body>
+  <script src="script/utils.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"> </script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"> </script>
+  <script src="script/Autentication.js"> </script>
+  <script src="script/crud.js"> </script>
+</html>

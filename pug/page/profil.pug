@@ -1,0 +1,19 @@
+include ../header.pug
+include ../loader.pug
+doctype html
+html(lang="fr")
+    include ../head.pug
+    body
+        +header ("Profil")
+        .container.my-5.py-5
+            .row.py-5 
+                .col-sm.d-flex.justify-content-center.align-item-center
+                    #profilPic
+                    #profilName
+            .row.py-5 
+                .col-sm
+                    h3.text-center Mes commentaires
+                    #profilComment
+                        +loader()
+    include ../footer.pug
+    script(src="script/profil.js") 

@@ -1,0 +1,16 @@
+
+mixin header(active)
+    header.header
+        .logo Waraniéné
+        div.links.desktop-only
+            - const rubriques = {'Accueil':'index.html','En savoir +':'savoir_plus.html','Nos produits':'nos_produits.html','Partenaires':'Partenaire.html'}
+            each url,nom in rubriques
+                a(class=`${nom == active ? "link active" : "link"}`, href= url)= nom
+        .d-flex.header-option.align-item-center
+            #toggle_userOption
+                i(class = "bi bi-person click")
+            i(class="bi bi-list click mobile-only " id="menu" onclick="OpenMenu()")
+    #userOption
+    #mobile-menu.d-none
+        each url,nom in rubriques
+                a(class=`${nom == active ? "link active" : "link"}`, href= url)= nom

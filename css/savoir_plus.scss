@@ -1,0 +1,173 @@
+@import "utils/flexbox.scss";
+
+.stack-wrapper {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 50px;
+  overflow: hidden;
+  display: flex;
+}
+
+.content,
+.stack {
+  width: 50%;
+  height: 100%;
+}
+
+.stack {
+  overflow-y: hidden;
+}
+
+.stack-empty {
+  height: 75vh;
+  padding: 20px 0;
+}
+.stack__item {
+  height: 75vh;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  transition: all 0.5s;
+}
+
+.stack__item.active {
+  opacity: 1;
+}
+
+/* width */
+.stack::-webkit-scrollbar {
+  width: 0;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.4fr 1fr 1.6fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  justify-items: start;
+  grid-template-areas:
+    "content-btn"
+    "containt-titre"
+    "content-paragraphe";
+  padding: 50px 20px 20px 20px;
+}
+
+.containt-titre {
+  align-self: center;
+  justify-self: center;
+  grid-area: containt-titre;
+}
+
+.content-btn {
+  justify-self: center;
+  align-self: center;
+  grid-area: content-btn;
+}
+
+.content-paragraphe {
+  justify-self: center;
+  grid-area: content-paragraphe;
+}
+
+#body {
+  background-color: #e2bc74;
+  transition: background-color 1.5s ease-in-out;
+}
+
+#p {
+  width: 300px;
+}
+
+.test {
+  color: #faa153;
+}
+
+#prev,
+#next {
+  border: none;
+  background-color: transparent;
+  font-size: 1.5em;
+}
+
+// --------------------------------------------------------------
+// la video
+.play-button {
+  width: 152px;
+  height: 152px;
+  position: relative;
+  cursor: pointer;
+}
+
+.play-backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.play-close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 15px);
+  border: none;
+  outline: none;
+  background: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.play-close::before,
+.play-close::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: rotate(45deg);
+  background-color: #000;
+}
+
+.play-close::after {
+  transform: rotate(-45deg);
+}
+
+.play-circles {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.play-perspective {
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  left: -230px;
+  top: -125px;
+}
+
+.play-triangle {
+  width: 600px;
+  height: 400px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    width: 100vw;
+  }
+}
+
+#stack1 {
+  background-position: 0 50%;
+  background-size: cover;
+}

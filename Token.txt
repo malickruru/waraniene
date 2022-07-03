@@ -1,0 +1,11 @@
+TWITTER {
+    api key : QYst5dqAL46eJBSXmCIOpGlxp
+    api key secret : 5w7qmjCxbHMrVnokjGxxkTSyTkMbKPX7K77WsLUzzWzZM1nXA9
+    bearer token : AAAAAAAAAAAAAAAAAAAAAEfZeAEAAAAA1QbzI9iBP2cm9iEzclA9FQVQpEs%3DR5Aec9ZqBlkX9E7tQmV3mOh5miAgiVVSUq9Kwn6zxhC9r0puYO
+    
+}
+
+FACEBOOK{
+    politique de confidentialité : https://www.freeprivacypolicy.com/live/f574f876-031b-411b-b185-36c646829f84
+https://waraniene-fa029.firebaseapp.com/__/auth/handler
+}

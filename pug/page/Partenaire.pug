@@ -1,0 +1,15 @@
+include ../header.pug
+doctype html
+html(lang="fr")
+    include ../head.pug
+    body
+        +header ("Partenaires")
+        .container.py-5.my-5 
+            h1.text-center Nos Partenaires
+            .partenaire-container
+                - const partenaires =  {"image/ecole-multimedia.jpg":"https://www.ecole-multimedia.com/","image/esma.png":"https://www.esma-edu.com/","image/ifran.png":"http://www.ifran.ci/",'image/meejo.png':"https://www.facebook.com/meejo.fi/videos/?ref=page_internal&mt_nav=0",'image/ministere.png':"https://www.tourisme.gouv.ci/"}
+                each url,img in partenaires
+                    div
+                        a(class=`img-partenaire`, href= url)
+                            img(src= img)
+    include ../footer.pug

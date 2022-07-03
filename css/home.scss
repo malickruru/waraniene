@@ -1,0 +1,190 @@
+@import "utils/flexbox.scss";
+@import "utils/bgImage.scss";
+
+$thick: 3px;
+$pad: 0.7em;
+$extra: calc(#{$pad} * 1.2);
+$color: #eec373;
+
+.home-left,
+.home-right {
+  height: 100%;
+}
+
+.home-left {
+  @include flex(center, center, column);
+  width: 70%;
+  background-color: #876445c2;
+  color: #fff;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.home-left > div {
+  @include flex(space-around, flex-end, 0);
+  height: 40%;
+  width: 100%;
+}
+
+.home-right > img {
+  width: 100%;
+  height: 100%;
+}
+
+.home-right {
+  @include Bgimage("../image/ghana-1927854.jpg");
+  @include Bgimage-size(cover);
+  overflow: hidden;
+  @include flex(flex-end, center, 0);
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff;
+  padding: 0;
+}
+
+.row.min-height {
+  height: 100vh !important;
+}
+
+.a {
+  color: #fff;
+  text-decoration: none;
+  padding: $pad $extra;
+  display: inline-block;
+  border: $thick solid transparent;
+  position: relative;
+  font-size: 1.5em;
+  cursor: pointer;
+  letter-spacing: 0.07em;
+
+  .text {
+    // padding: 0 0.3em;
+    transform: translate3d(0, $pad, 0);
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+  }
+
+  &:after {
+    position: absolute;
+    content: "";
+    bottom: -$thick;
+    left: $extra;
+    right: $extra;
+    height: $thick;
+    background: $color;
+    // z-index: -1;
+    transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s,
+      right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s,
+      left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
+    transform-origin: left;
+  }
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.line {
+  position: absolute;
+  background: $color;
+
+  &.-right,
+  &.-left {
+    width: $thick;
+    bottom: -$thick;
+    top: -$thick;
+    transform: scale3d(1, 0, 1);
+  }
+
+  &.-top,
+  &.-bottom {
+    height: $thick;
+    left: -$thick;
+    right: -$thick;
+    transform: scale3d(0, 1, 1);
+  }
+
+  &.-right {
+    right: -$thick;
+    transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
+    transform-origin: top;
+  }
+
+  &.-top {
+    top: -$thick;
+    transition: transform 0.08s linear 0.43s;
+    transform-origin: left;
+  }
+
+  &.-left {
+    left: -$thick;
+    transition: transform 0.08s linear 0.51s;
+    transform-origin: bottom;
+  }
+
+  &.-bottom {
+    bottom: -$thick;
+    transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+    transform-origin: right;
+  }
+}
+
+a:hover,
+a:active {
+  .text {
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+  }
+
+  &:after {
+    transform: scale3d(0, 1, 1);
+    right: -$thick;
+    left: -$thick;
+    transform-origin: right;
+    transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s,
+      right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s;
+  }
+
+  .line {
+    transform: scale3d(1, 1, 1);
+
+    &.-right {
+      transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
+      transform-origin: bottom;
+    }
+
+    &.-top {
+      transition: transform 0.08s linear 0.4s;
+      transform-origin: right;
+    }
+
+    &.-left {
+      transition: transform 0.08s linear 0.48s;
+      transform-origin: top;
+    }
+
+    &.-bottom {
+      transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
+      transform-origin: left;
+    }
+  }
+}
+
+#profilComment {
+  padding-top: 150px;
+  position: relative;
+  width: 100%;
+  @include flex(center, center, column);
+}
+
+.profilComments {
+  @include flex(space-between, center, 0);
+  width: 80%;
+}
+
+#txtComment {
+  max-width: 70%;
+}
