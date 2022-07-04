@@ -1,7 +1,7 @@
 
 mixin header(active)
     header.header
-        .logo Waraniéné
+        a.logo(href="index.html") Waraniéné
         div.links.desktop-only
             - const rubriques = {'Accueil':'index.html','En savoir +':'savoir_plus.html','Nos produits':'nos_produits.html','Partenaires':'Partenaire.html'}
             each url,nom in rubriques

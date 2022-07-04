@@ -12,18 +12,33 @@ $color: #eec373;
 }
 
 .home-left {
-  @include flex(center, center, column);
-  width: 70%;
-  background-color: #876445c2;
+  @include flex(center, left, column);
+  // width: 100%;
+  padding: 0 10px;
+  background-color: #876445;
   color: #fff;
   z-index: 1;
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  z-index: 1;
+
+  clip-path: polygon(
+    68.82% 85.37%,
+    60.36% 70.74%,
+    60.36% 41.47%,
+    50.47% 29.69%,
+    60.36% 15.91%,
+    60.36% 0%,
+    0% 0%,
+    0% 100%,
+    60.36% 100%
+  );
 }
 
 .home-left > div {
-  @include flex(space-around, flex-end, 0);
+  @include flex(left, flex-end, 0);
   height: 40%;
   width: 100%;
 }
@@ -31,6 +46,23 @@ $color: #eec373;
 .home-right > img {
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  clip-path: polygon(
+    50% 0%,
+    100% 0,
+    89% 37%,
+    100% 70%,
+    100% 100%,
+    85% 100%,
+    78% 83%,
+    62% 81%,
+    65% 56%,
+    46% 24%
+  );
 }
 
 .home-right {
@@ -41,7 +73,6 @@ $color: #eec373;
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-color: #fff;
   padding: 0;
 }
 
@@ -49,9 +80,14 @@ $color: #eec373;
   height: 100vh !important;
 }
 
+// #a1{
+//   transform: translateY(-150px);
+// }
+
 .a {
   color: #fff;
   text-decoration: none;
+  margin: 0 30px;
   padding: $pad $extra;
   display: inline-block;
   border: $thick solid transparent;

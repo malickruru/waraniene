@@ -10190,6 +10190,11 @@ textarea.form-control-lg {
 
 .logo {
   color: #fff;
+  font-family: "Aclonica";
+  text-decoration: none;
+}
+.logo:hover {
+  color: #eec373;
 }
 
 #toggle_userOption {
@@ -10666,20 +10671,23 @@ textarea.form-control-lg {
 .home-left {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   flex-direction: column;
-  width: 70%;
-  background-color: rgba(135, 100, 69, 0.7607843137);
+  padding: 0 10px;
+  background-color: #876445;
   color: #fff;
   z-index: 1;
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  z-index: 1;
+  clip-path: polygon(68.82% 85.37%, 60.36% 70.74%, 60.36% 41.47%, 50.47% 29.69%, 60.36% 15.91%, 60.36% 0%, 0% 0%, 0% 100%, 60.36% 100%);
 }
 
 .home-left > div {
   display: flex;
-  justify-content: space-around;
+  justify-content: left;
   align-items: flex-end;
   height: 40%;
   width: 100%;
@@ -10688,6 +10696,12 @@ textarea.form-control-lg {
 .home-right > img {
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  clip-path: polygon(50% 0%, 100% 0, 89% 37%, 100% 70%, 100% 100%, 85% 100%, 78% 83%, 62% 81%, 65% 56%, 46% 24%);
 }
 
 .home-right {
@@ -10702,7 +10716,6 @@ textarea.form-control-lg {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-color: #fff;
   padding: 0;
 }
 
@@ -10713,6 +10726,7 @@ textarea.form-control-lg {
 .a {
   color: #fff;
   text-decoration: none;
+  margin: 0 30px;
   padding: 0.7em calc(0.7em * 1.2);
   display: inline-block;
   border: 3px solid transparent;

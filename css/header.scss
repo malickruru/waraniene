@@ -32,8 +32,13 @@
   color: #fff;
 }
 
-.logo {
+.logo{
   color: #fff;
+  font-family: "Aclonica";
+  text-decoration: none;
+  &:hover{
+    color: #eec373;
+  }
 }
 
 #toggle_userOption {
