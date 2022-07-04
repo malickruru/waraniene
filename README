@@ -1,7 +1,0 @@
-1.npm init pour créer le fichier package.json
-2.npm install bootstrap --save
-3.npm install sass
-    le fichier _variable.scss contient les variable à modifier
-    sass main.scss main.css , la commande pour écraser le css
-
-//a(class=onglet.nom=active ? "link active" : "link", href=onglet.href)= onglet.nom
